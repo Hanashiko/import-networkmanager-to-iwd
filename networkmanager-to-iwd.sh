@@ -19,7 +19,7 @@ for FILE in "$NM_DIR"/*.nmconnection; do
     [ -e "$FILE" ] || continue
 
     SSID=$(grep '^ssid=' "$FILE" | head -n1 | cut -d'=' -f2 | tr -d '"')
-    PSK=$(grep '^psk=' "$FILE" | head -n1 | cur -d'=' -f2)
+    PSK=$(grep '^psk=' "$FILE" | head -n1 | cut -d'=' -f2)
 
     if [[ -z "$SSID" ]]; then
         echo "Missing $FILE (no SSID)"
