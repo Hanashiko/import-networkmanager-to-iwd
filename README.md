@@ -1,9 +1,34 @@
-Script for import NetworkManager connections to iwd
+# networkmanager-to-iwd
 
-### run
+networkmanager-to-iwd a tool for import networks configurations from NetworkManager connections to iwd.
+
+## Installation
+
+### From AUR (Arch User Repository)
+
 ```bash
-chown +x ./import_nm_to_iwd.sh
+# using an AUR helper like yay:
+yay -S networkmanager-to-iwd
+
+# or manually:
+git clone https://aur.archlinux.org/networkmanager-to-iwd.git
+cd networkmanager-to-iwd
+makepkg -si
 ```
+
+### Manual Installation
+
 ```bash
-sudo sh ./import_nm_to_iwd.sh
+git clone https://github.com/Hanashiko/networkmanager-to-iwd.git
+cd networkmanager-to-iwd
+sudo install -Dm755 networkmanager-to-iwd.sh /usr/bin/networkmanager-to-iwd
 ```
+
+## Usage
+
+```bash
+# defaul usage - import networks connections from NetworkManager to iwd
+sudo networkmanager-to-iwd
+```
+
+
