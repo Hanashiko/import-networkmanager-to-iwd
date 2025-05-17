@@ -26,9 +26,10 @@ for FILE in "$NM_DIR"/*.nmconnection; do
         continue
     fi
 
-    PROFILE="$IWD_DIR/${SSID}.psk"
+    SAFE_SSID=$(echo "$SSID" | sed 's/[^a-zA-Z0-9_-]/_/g')
+    PROFILE="$IWD_DIR/${SAFE_SSID}.psk"
 
-    echo "Create a profile for the SSID: $SSID"
+    echo "Create a profile for the SSID: $SAFE_SSID"
 
     {
         if [[ -n "$PSK" ]]; then
