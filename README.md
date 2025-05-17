@@ -31,4 +31,6 @@ sudo install -Dm755 networkmanager-to-iwd.sh /usr/bin/networkmanager-to-iwd
 sudo networkmanager-to-iwd
 ```
 
+## License
 
+MIT License
